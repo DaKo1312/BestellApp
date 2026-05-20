@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+    position: relative;
+    list-style: none;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    background: initial;
+    border: initial;
+}
+
+body {
+    min-width: 100dvh;
+}
+
+.content {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Palanquin Dark';
+    font-weight: 700;
+}
