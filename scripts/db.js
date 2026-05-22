@@ -41,7 +41,7 @@ let myDishesP = [
         "description": "Tomato slices, Mozzarella, Chorizo"
     },
     {
-        "image": "./assets/img/pizza-funghir.jpg",
+        "image": "./assets/img/pizza-funghi.jpg",
         "name": "Funghi",
         "price": 12.90,
         "description": "Red Onion, Olives, Button Mushrooms, Mozzarella"
@@ -54,7 +54,7 @@ let myDishesP = [
     }
 ]
 
-let myDishesPS= [
+let myDishesS= [
     //Salad
     {
         "image": "./assets/img/beef-salad.jpg",

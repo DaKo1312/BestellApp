@@ -77,144 +77,106 @@ main {
     }
 }
 
-
 .dishes_banner {
     display: flex;
     align-items: center;
-    gap: 30px;
     background-color: rgba(231, 108, 31, 1);
     width: 100%;
     height: 60px;
-    padding-left: 167px;
     overflow: visible;
-    
-    img {
-        width: 88px;
-        height: 91px;
-        margin-top: -21px;
-    }
-    
-    h2 {
-        font-size: 40px;
-        font-family: 'Palanquin';
-        font-weight: 700;
-        color: white;
-    }
-    
-    span {
-        font-weight: 400;
+    justify-content: center;
+
+    .banner_content {
+        display: flex;
+        gap: 30px;
+        width: 100%;
+        width: 1440px;
+        padding-left: 167px;
+
+        img {
+            width: 88px;
+            height: 91px;
+            margin-top: -21px;
+        }
+        
+        h2 {
+            font-size: 40px;
+            font-family: 'Palanquin';
+            font-weight: 700;
+            color: white;
+        }
+        
+        span {
+            font-weight: 400;
+        }
     }
 }
+
 
 #dishes_container_bs,
 #dishes_container_p,
 #dishes_container_s {
+    display: flex;
     width: 100%;
-    padding: 30px 0 50px 119px;
-
-    .dishes_bs {
-        border: 2px solid black;
-        display: flex;
-        width: 713px;
-        height: 612px;  
-    }
-
-    .dishes_p {
-        border: 2px solid black;
-        display: flex;
-        width: 713px;
-        height: 612px;  
-    }
-
-    .dishes_s {
-        border: 2px solid black;
-        display: flex;
-        width: 713px;
-        height: 612px;  
-    }
+    justify-content: center;
 }
 
-.dishes_bs {
+.container_content {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    width: 100%;
+    width: 1440px;
+    padding: 30px 0 50px 119px;
 }
 
 .dish_card {
     display: flex;
-    width: 713px;
-    height: 141px;
-    align-items: flex-start;
     background-color: rgba(253, 234, 220, 1);
-    border-radius: 20px;
-    padding: 14px;
-    position: relative;
-}
-
-.dish_card img {
-    display: block;
-    width: 217px;
-    height: 121px;
-    object-fit: cover;
     border-radius: 12px;
+    padding: 10px;
+
+    img {
+        display: block;
+        width: 207px;
+        height: 121px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .dish_price {
+        display: flex;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: 'Palanquin';
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: 'Palanquin';
+        
+    }
+
+    .dish_description {
+        line-height: 1.2;
+        font-family: 'Palanquin';
+    }
 }
 
-.dish_info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.title_price {
+.dish_header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.title_price h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-}
-
-.title_price span {
-    font-size: 22px;
-    font-weight: 700;
-    color: #333;
-}
-
-.description {
-    margin: 0;
-
-    font-size: 16px;
-    line-height: 1.4;
-
-    color: #333;
-}
-
-.add_btn {
-    align-self: flex-end;
-
-    border: none;
-    background-color: white;
-
-    padding: 10px 18px;
-
-    border-radius: 999px;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.add_btn:hover {
-    background-color: #ff7a00;
-    color: white;
+.dishes_bs,
+.dishes_p,
+.dishes_s {
+    border: 2px solid black;
+    display: flex;
+    width: 716px;
+    height: 612px;  
+    flex-direction: column;
+    gap: 15px;
 }
 
 .placeholder {
