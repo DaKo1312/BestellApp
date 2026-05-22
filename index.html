@@ -16,7 +16,7 @@
     <script src="script.js" defer></script>
     <title>Hunger? 🍔🍕🥗 BestellApp</title>
 </head>
-<body>
+<body onload="renderMyDishesBs()">
     <header>
         <div class="header_content">
             <img class="logo_header" src="./assets/icons/logo-header.svg">
@@ -35,10 +35,45 @@
                 <img class="rating_icon" src="./assets/icons/rating-icon.png">
             </div>
             <div class="subline">
-                <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
+                <p>The best of Burgers, Pizza, and Greens, all in one great Place.</p>
             </div>
         </section>
+
+            <div class="dishes_banner">
+                <img src="./assets/icons/burger-icon.png">
+                <h2>Burger & Sandwiches</span></h2>
+            </div>
+            <section id="dishes_container_bs">
+                <div class="dishes_bs"></div>
+            </section>
+
+            <div class="dishes_banner">
+                <img src="./assets/icons/pizza-icon.png">
+                <h2>Pizza <span>(30cm)</span></h2>
+            </div>
+            <section id="dishes_container_p">
+                <div class="dishes_p"></div>
+            </section>
+
+            <div class="dishes_banner">
+                <img src="./assets/icons/salad-icon.png">
+                <h2>Salad</h2>
+            </div>
+            <section id="dishes_container_s">
+                <div class="dishes_s"></div>
+            </section>
     </main>
-    
+
+    <footer>
+        <div class="footer_content">
+            <div class="footer_copyright">
+                <img src="./assets/icons/copyright.svg">
+                <p>2025 BurgerHouse</p>
+            </div>
+            <p>Imprint</p>
+            <p>Cookie Preferences</p>
+        </div>
+    </footer>
+
 </body>
 </html>
