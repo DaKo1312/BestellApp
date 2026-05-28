@@ -1,3 +1,23 @@
+main {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#main_top {
+    display: flex;
+    justify-content: center;
+
+    .main_img {
+        top: 64px;
+        z-index: 9;
+    }
+}
+
+.layout_container {
+    display: flex;
+    align-items: flex-start;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -17,36 +37,12 @@ header {
     }
 }
 
-main {
-    height: 100%;
-}
-
-#main_top {
-    display: flex;
-    justify-content: center;
-    position: relative;
-
-    .main_img {
-        top: 64px;
-        z-index: 9;
-    }
-
-    .main_logo {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        z-index: 9;
-        top: 430px;
-    }
-}
-
 #main_headline {
     display: flex;
-    padding: 50px 284px 90px 284px;
     justify-content: center;
     flex-direction: column;
-    top: 70px;
     align-items: center;
+    bottom: 80px;
 
     p {
         font-family: 'Palanquin';
@@ -61,14 +57,12 @@ main {
         align-items: center;
         justify-content: center;
 
-            
     .rating_icon {
         width: 110px;
         height: 32px;
     }
 
     h1 {
-        position: relative;
         bottom: 7px;
         span {
             color: rgba(231, 108, 31, 1);
@@ -77,13 +71,25 @@ main {
     }
 }
 
+.main_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 200px;
+        height: 200px;
+        bottom: 80px;
+        z-index: 10;
+    }
+}
+
 .dishes_banner {
     display: flex;
     align-items: center;
     background-color: rgba(231, 108, 31, 1);
-    width: 100%;
+    width: 99.4vw;
     height: 60px;
-    overflow: visible;
     justify-content: center;
 
     .banner_content {
@@ -112,12 +118,13 @@ main {
     }
 }
 
-
 #dishes_container_bs,
 #dishes_container_p,
 #dishes_container_s {
     display: flex;
+    width: 1005px;
     width: 100%;
+    flex: 1;
     justify-content: center;
 }
 
@@ -128,11 +135,30 @@ main {
     padding: 30px 0 50px 119px;
 }
 
+.dish_content {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.dish_right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+}
+
+.dish_left {
+    display: flex;
+    padding-left: 8px;
+}
+
 .dish_card {
     display: flex;
-    background-color: rgba(253, 234, 220, 1);
+    background-color: rgba(253, 234, 220, 1);;
     border-radius: 12px;
     padding: 10px;
+    font-family: 'Palanquin';
 
     img {
         display: block;
@@ -146,43 +172,40 @@ main {
         display: flex;
         font-size: 24px;
         font-weight: 600;
-        font-family: 'Palanquin';
+        justify-content: flex-end;
     }
 
     h3 {
         font-size: 24px;
         font-weight: 600;
-        font-family: 'Palanquin';
-        
     }
 
     .dish_description {
         line-height: 1.2;
-        font-family: 'Palanquin';
+        font-weight: 500;
+    }
+
+    .dish_header {
+        display: flex;
+        width: 469px;
+        justify-content: space-between;
+        padding-left: 8px;
+    }
+
+    .dish_footer {
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
-.dish_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.dishes_bs,
-.dishes_p,
-.dishes_s {
-    border: 2px solid black;
+#dishes_bs,
+#dishes_p,
+#dishes_s {
     display: flex;
     width: 716px;
     height: 612px;  
     flex-direction: column;
     gap: 15px;
-}
-
-.placeholder {
-    border:2px solid rgb(0, 0, 0);
-    width: 200px;
-    height: 200px;
 }
 
 footer {
@@ -195,8 +218,6 @@ footer {
     
     .footer_content {
         display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 72px;
         width: 100%;
         width: 1440px;
@@ -211,6 +232,4 @@ footer {
         align-items: center;
     }
 }
-
-
 
