@@ -1,0 +1,212 @@
+/* #region design basket */
+
+.basket_container {
+    position: sticky;
+    top: 63px;
+    right: calc((100vw - 1440px) / 2 - 16px);
+    width: 435px;
+    height: 794px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 59px 31px 0 0;
+    background-color: rgba(54, 53, 52, 1);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    h3 {
+        font-size: 32px;
+        font-family: 'Palanquin';
+        font-weight: 700;
+        color: rgba(253, 234, 220, 1);
+        justify-content: center;
+        display: flex;
+        padding-bottom: 20px;
+    }
+}
+
+#basket_content {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 676px;
+    align-items: center;
+    img {
+        width: 128px;
+    }
+
+    .basket_text span {
+        font-family: 'Palanquin';
+        color: rgba(253, 234, 220, 1);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+}
+
+.basket_button {
+    width: 115px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    font-family: 'Palanquin';
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(54, 53, 52, 1);
+
+}
+
+.basket_button:hover {
+    cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region design order */
+
+#order_content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    gap: 8px;
+    height: 355px;
+    overflow-y: auto;
+
+    .basket_item {
+    background-color: rgba(253, 234, 220, 1);
+    border-radius: 20px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 340px;
+    }
+
+    .basket_item_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .basket_item_top h4 {
+        font-size: 22px;
+        font-family: 'Palanquin';
+        font-weight: 700;
+        max-width: 250px;
+    }
+
+    .basket_item_top button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .basket_item_bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 22px;
+        font-family: 'Palanquin';
+    }
+
+    .basket_amount {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .basket_amount button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .basket_item_bottom p {
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+#order_content::-webkit-scrollbar {
+    width: 6px;
+}
+
+#order_content::-webkit-scrollbar-thumb {
+    background-color: rgba(253, 234, 220, 1);
+    border-radius: 999px;
+}
+
+/* #endregion */
+
+/* #region price_table */
+.basket_summary_table {
+    width: 100%;
+    margin-top: 32px;
+    border-collapse: collapse;
+    color: rgba(253, 234, 220, 1);
+    font-family: 'Palanquin';
+    font-size: 20px;
+    font-weight: 600;
+
+    .total_row {
+        font-size: 22px;
+        font-weight: 700;
+    }
+    
+    .summary_line {
+        width: 100%;
+        height: 2px;
+        background-color: rgba(253, 234, 220, 1);
+    }
+}
+
+.buy_button {
+    width: 320px;
+    height: 64px;
+    margin-top: 31px;
+    border: none;
+    border-radius: 60px;
+    background-color: rgba(238, 119, 29, 1);
+    color: rgba(253, 234, 220, 1);
+    font-size: 32px;
+    font-family: 'Palanquin';
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.basket_summary_table td:last-child {
+        text-align: right;
+}
+
+/* #endregion */
+
+/* #region .basket_empty */
+
+.basket_empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;
+
+    p {
+        color: rgba(253, 234, 220, 1);
+        font-size: 20px;
+        font-family: 'Palanquin';
+        font-weight: 500;
+        line-height: 1.2;
+        padding-bottom: 20px;
+    }
+    
+    img {
+        width: 128px;
+    }
+}
+
+/* #endregion */
+
+

@@ -1,0 +1,56 @@
+#order_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.overlay_none {
+    display: none;
+
+    h3 {
+        font-size: 42px;
+        font-family: 'Palanquin';
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 29px;
+        font-family: 'Palanquin';
+        font-weight: 700;
+    }
+}
+
+.order_popup {
+    position: relative;
+    background-color: rgb(18, 17, 17);
+    padding: 32px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    opacity: 1;
+}
+
+.overlay_none {
+    display: none;
+}
+
+.close_overlay {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.overlay_active {
+    display: flex;
+}

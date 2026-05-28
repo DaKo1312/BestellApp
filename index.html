@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/icons/menu-icon-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/overlay.css">
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
@@ -24,11 +24,17 @@
         </div>
     </header>
 
-    <main>
-        <section id="main_top">
+    <section id="main_top">
+        <div class="main_top_content">
             <img class="main_img" src="./assets/img/header-image.jpg">
-            <img class="main_logo" src="./assets/icons/main-icon.png">
-        </section>
+        </div>
+    </section>
+    
+    <main>
+        <div class="main_logo">
+            <img src="./assets/icons/main-icon.png">
+        </div>
+    
         <section id="main_headline">
             <div class="headline_content">
                 <h1><span>Burger</span>House</h1>
@@ -39,41 +45,58 @@
             </div>
         </section>
 
-            <div class="dishes_banner">
-                <div class="banner_content">
-                    <img src="./assets/icons/burger-icon.png">
-                    <h2>Burger & Sandwiches</h2>
+        <div class="layout_container">
+            <section class="dishes_container">
+                <div class="dishes_banner">
+                    <div class="banner_content">
+                        <img src="./assets/icons/burger-icon.png">
+                        <h2>Burger & Sandwiches</h2>
+                    </div>
                 </div>
-            </div>
-            <section id="dishes_container_bs">
-                <div class="container_content">
-                    <div class="dishes_bs"></div>
+                <section id="dishes_container_bs">
+                    <div class="container_content">
+                        <div id="dishes_bs"></div>
+                    </div>
+                </section>
+
+                <div class="dishes_banner">
+                    <div class="banner_content">
+                        <img src="./assets/icons/pizza-icon.png">
+                        <h2>Pizza <span>(30cm)</span></h2>
+                    </div>
                 </div>
+                <section id="dishes_container_p">
+                    <div class="container_content">
+                        <div id="dishes_p"></div>
+                    </div>
+                </section>
+
+                <div class="dishes_banner">
+                    <div class="banner_content">
+                        <img src="./assets/icons/salad-icon.png">
+                        <h2>Salad</h2>
+                    </div>
+                </div>
+                <section id="dishes_container_s">
+                    <div class="container_content">
+                        <div id="dishes_s"></div>
+                    </div>
+                </section>
             </section>
 
-            <div class="dishes_banner">
-                <div class="banner_content">
-                    <img src="./assets/icons/pizza-icon.png">
-                    <h2>Pizza <span>(30cm)</span></h2>
+            <aside id="basket_container" class="basket_container">
+                <div id="basket_content">
+                    <div class="basket_empty">
+                        <h3>Your Basket</h3>
+                        <p>
+                        Nothing here yet.<br>
+                        Go ahead and choose something delicious!
+                        </p>
+                        <img src="./assets/icons/shopping-cart-icon.png">
+                    </div>
                 </div>
-            </div>
-            <section id="dishes_container_p">
-                <div class="container_content">
-                    <div class="dishes_p"></div>
-                </div>
-            </section>
-
-            <div class="dishes_banner">
-                <div class="banner_content">
-                    <img src="./assets/icons/salad-icon.png">
-                    <h2>Salad</h2>
-                </div>
-            </div>
-            <section id="dishes_container_s">
-                <div class="container_content">
-                    <div class="dishes_s"></div>
-                </div>
-            </section>
+            </aside>
+        </div>
     </main>
 
     <footer>
@@ -86,6 +109,17 @@
             <p>Cookie Preferences</p>
         </div>
     </footer>
+
+    <div id="order_overlay" class="overlay_none">
+        <div class="order_popup">
+            <button class="close_overlay" onclick="closeOverlay()">
+                ✕
+            </button>
+            <img src="./assets/icons/delivery-truck-icon.png">
+            <h3>Order confirmed!</h3>
+            <p>Your food is on the way!</p>
+        </div>
+    </div>
 
 </body>
 </html>
