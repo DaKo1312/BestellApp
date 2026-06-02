@@ -102,7 +102,7 @@ function getBasketWrapperTemplate() {
         </table>
         <button id="buy_button"
             class="buy_button"
-            onclick="buyNow()">
+            onclick="buyNow()" disabled>
             Buy now (<span id="buy_total"></span>)
         </button>
     `;
