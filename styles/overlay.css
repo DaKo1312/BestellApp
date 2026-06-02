@@ -42,8 +42,8 @@
 
 .close_overlay {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 20px;
+    right: 30px;
     border: none;
     background: none;
     color: white;

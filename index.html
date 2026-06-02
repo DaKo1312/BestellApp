@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/icons/menu-icon-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/overlay.css">
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <script src="./scripts/templates.js"></script>
     <script src="./scripts/storage.js"></script>
     <script src="./scripts/db.js"></script>
     <script src="script.js" defer></script>
     <title>Hunger? 🍔🍕🥗 BestellApp</title>
 </head>
-<body onload="renderMyDishesBs()">
+<body onload="init()">
     <header>
         <div class="header_content">
             <img class="logo_header" src="./assets/icons/logo-header.svg">
@@ -46,8 +46,8 @@
         </section>
 
         <div class="layout_container">
+            <div class="dishes_banner">
             <section class="dishes_container">
-                <div class="dishes_banner">
                     <div class="banner_content">
                         <img src="./assets/icons/burger-icon.png">
                         <h2>Burger & Sandwiches</h2>
@@ -58,8 +58,10 @@
                         <div id="dishes_bs"></div>
                     </div>
                 </section>
+            </section>
 
-                <div class="dishes_banner">
+            <div class="dishes_banner">
+            <section class="dishes_container">       
                     <div class="banner_content">
                         <img src="./assets/icons/pizza-icon.png">
                         <h2>Pizza <span>(30cm)</span></h2>
@@ -70,8 +72,10 @@
                         <div id="dishes_p"></div>
                     </div>
                 </section>
+            </section>     
 
-                <div class="dishes_banner">
+            <div class="dishes_banner">
+            <section class="dishes_container">      
                     <div class="banner_content">
                         <img src="./assets/icons/salad-icon.png">
                         <h2>Salad</h2>
@@ -84,15 +88,17 @@
                 </section>
             </section>
 
-            <aside id="basket_container" class="basket_container">
-                <div id="basket_content">
-                    <div class="basket_empty">
-                        <h3>Your Basket</h3>
-                        <p>
-                        Nothing here yet.<br>
-                        Go ahead and choose something delicious!
-                        </p>
-                        <img src="./assets/icons/shopping-cart-icon.png">
+            <aside>
+                <div id="basket_container" class="basket_container basket_none">
+                    <div id="basket_content">
+                        <div class="basket_empty">
+                            <h3>Your Basket</h3>
+                            <p>
+                            Nothing here yet.<br>
+                            Go ahead and choose something delicious!
+                            </p>
+                            <img src="./assets/icons/shopping-cart-icon.png">
+                        </div>
                     </div>
                 </div>
             </aside>
@@ -110,7 +116,21 @@
         </div>
     </footer>
 
-    <div id="order_overlay" class="overlay_none">
+    <nav id="mobile_nav">
+        <div class="mobile_nav_content">
+            <img src="./assets/icons/home-icon-white.png">
+            <img src="./assets/icons/person-icon-white.png">
+            <img src="./assets/icons/menu-icon-white.png">
+            <div class="mobile_basket_icon">
+                <img id="mobile_basket_icon"
+                    src="./assets/icons/shopping-cart-icon-white.png"
+                    onclick="toggleCart()">
+                <span id="basket_badge">0</span>
+            </div>
+        </div>
+    </nav> 
+
+    <div id="order_overlay" class="overlay_none" onclick="closeOverlay()">
         <div class="order_popup">
             <button class="close_overlay" onclick="closeOverlay()">
                 ✕
@@ -120,6 +140,7 @@
             <p>Your food is on the way!</p>
         </div>
     </div>
+
 
 </body>
 </html>
