@@ -10,8 +10,13 @@ main {
     width: 100%;
 
     .main_img {
+        display: block;
         top: 64px;
         z-index: 9;
+    }
+
+    .mobile_img {
+        display: none;
     }
 }
 
@@ -113,6 +118,13 @@ header {
             font-family: 'Palanquin';
             font-weight: 700;
             color: white;
+
+            .sandwiches {
+                font-size: 40px;
+                font-family: 'Palanquin';
+                font-weight: 700;
+                color: white;
+            }
         }
         
         span {
@@ -206,8 +218,7 @@ header {
 #dishes_p,
 #dishes_s {
     display: flex;
-    width: 761px;
-    height: 612px;  
+    width: 761px;  
     flex-direction: column;
     gap: 15px;
 }
