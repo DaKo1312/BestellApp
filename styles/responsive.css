@@ -13,7 +13,7 @@
     }
 
     .dishes_banner {
-        width: 1000px;
+        width: 100%;
     }
 }
 
@@ -59,11 +59,31 @@
 }
 
 @media (max-width: 900px) {
-    .dishes_banner {
-        justify-content: flex-start;
-        width: 100%;
+
+    .dishes_banner .banner_content {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: 0;
+        width: 100%;
+        padding-left: 0;
+        top: -25px;
+    }
+
+    .dishes_banner .banner_content img {
+        width: 50px;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .dishes_banner .banner_content h2 {
+        font-size: 32px;
+        margin: 0;
+        line-height: 1.2;
+
+        .sandwiches {
+            display: none;
+        }
     }
 
     header {
@@ -103,14 +123,67 @@
         }
     }
 
-    .dishes_banner {
+    .dish_card {
         flex-direction: column;
-        align-items: center;
+    }
 
-        banner_content {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+    .dish_card img {
+        width: 100%;
+        height: 120px;
+    }
+
+    .dish_content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .dish_left {
+        display: flex;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .dish_right {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 8px;
+        row-gap: 0;
+        width: 100%;
+    }
+
+    .dish_price {
+        justify-content: flex-start;
+    }
+
+    .dish_title {
+        line-height: 1.2;
+        max-width: 300px;
+    }
+
+    #dishes_bs,
+    #dishes_p,
+    #dishes_s {
+        height: auto;
+    }
+
+    .container_content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    #main_top .main_img {
+        display: none;
+    }
+
+    #main_top .mobile_img {
+        display: block;
+        top: 64px;
+    }
+
+    .container_content {
+        padding: 0;
     }
 }
