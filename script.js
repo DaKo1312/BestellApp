@@ -168,7 +168,9 @@ function closeOverlay() {
 
 function toggleCart() {
     document.getElementById('basket_container')
-    .classList.toggle('basket_none');
+    .classList.toggle('show_basket');
+
+    document.body.classList.toggle('no_scroll');
 }
 
 function closeCart() {
