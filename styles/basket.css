@@ -250,3 +250,11 @@ aside {
 .basket_none {
     display: none;
 }
+
+.basket_close {
+    display: none;
+}
+
+.no_scroll {
+    overflow: hidden;
+}

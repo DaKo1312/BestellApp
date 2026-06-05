@@ -78,6 +78,8 @@ function getBasketTemplate(index) {
 function getBasketWrapperTemplate() {
     return `
         <h3>Your Basket</h3>
+        <span class="basket_close"
+            onclick="toggleCart()">✕</span>
         <div class="basket_scroll">
             <div id="order_content" class="basket_items"></div>
         </div>
